@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Problem — Orivus AI Product Framework</title>
+    <meta
+      name="description"
+      content="The engineering problem of AI-native product development: generating code is easy; preserving product knowledge is not."
+    />
+    <link rel="icon" href="assets/orivus-logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="label">Orivus AI Product Framework</span>
+          <span class="label-short">Orivus</span>
+        </a>
+        <nav class="top">
+          <a href="problem.html" class="active">Problem</a>
+          <a href="why.html">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html">Article</a>
+          <a class="gh" href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom: 24px">
+        <div class="wrap">
+          <span class="eyebrow">The Problem</span>
+          <h1>Generating code is<br /><span class="grad-text">no longer the hard part</span></h1>
+          <p class="subtitle">
+            The problem is building products when a significant share of
+            engineering is executed by AI.
+          </p>
+        </div>
+      </section>
+
+      <section style="padding-top: 8px">
+        <div class="wrap prose">
+          <h2>Code generation is solved</h2>
+          <p>
+            AI can generate code, tests, documentation, and even architectural
+            proposals in seconds. Output is no longer the bottleneck.
+          </p>
+
+          <h2>Product evolution is not</h2>
+          <p>Most AI-assisted work still follows one pattern:</p>
+          <pre><code>Problem → Prompt → Generated Code</code></pre>
+          <p>
+            This optimizes code generation. It does not optimize product
+            evolution. Over time, software built this way accumulates:
+          </p>
+          <ul>
+            <li>architectural drift, because nothing enforces the architecture;</li>
+            <li>duplicated and superseded implementations;</li>
+            <li>obsolete documentation;</li>
+            <li>
+              product knowledge scattered across conversations instead of
+              becoming institutional knowledge;
+            </li>
+            <li>technical debt created by prediction instead of understanding.</li>
+          </ul>
+
+          <h2>Prediction is not understanding</h2>
+          <p>
+            The core failure is that AI predicts what code should exist instead
+            of understanding what product should exist. Prediction without
+            governed knowledge produces dead code, duplicated behavior, forgotten
+            decisions, and undocumented assumptions.
+          </p>
+
+          <h2>What is actually needed</h2>
+          <p>
+            A model where product knowledge governs implementation, where AI
+            operates inside explicit engineering boundaries, and where
+            engineering decisions become durable knowledge rather than temporary
+            conversation context.
+          </p>
+
+          <div class="actions" style="margin-top: 28px">
+            <a class="btn primary" href="why.html">Why this standard exists</a>
+            <a class="btn ghost" href="principles.html">Core Principles</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span>Orivus AI Product Framework · v0.1 · Apache-2.0</span>
+        <span class="links">
+          <a href="problem.html">Problem</a>
+          <a href="why.html">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html">Article</a>
+          <a href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

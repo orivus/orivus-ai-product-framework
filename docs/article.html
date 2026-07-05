@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Why Product Knowledge Matters in AI-Native Engineering — Orivus AI Product
+      Framework
+    </title>
+    <meta
+      name="description"
+      content="A technical essay on why Product Knowledge, not source code, becomes the primary engineering asset when AI executes engineering."
+    />
+    <link rel="icon" href="assets/orivus-logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="label">Orivus AI Product Framework</span>
+          <span class="label-short">Orivus</span>
+        </a>
+        <nav class="top">
+          <a href="problem.html">Problem</a>
+          <a href="why.html">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html" class="active">Article</a>
+          <a class="gh" href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom: 24px">
+        <div class="wrap">
+          <span class="eyebrow">Essay</span>
+          <h1>
+            Why Product Knowledge Matters in<br /><span class="grad-text"
+              >AI-Native Engineering</span
+            >
+          </h1>
+          <p class="subtitle">
+            What becomes scarce when code generation becomes cheap.
+          </p>
+        </div>
+      </section>
+
+      <section style="padding-top: 8px">
+        <div class="wrap prose">
+          <h2>Engineering at machine speed</h2>
+          <p>
+            For most of software's history, the constraint was production. Writing
+            code, tests, and documentation took human time, and that time bounded
+            how fast a product could change. Nearly every practice we inherited —
+            from code review to sprint planning — assumes that producing software
+            is the expensive step.
+          </p>
+          <p>
+            That assumption no longer holds. AI systems now produce
+            implementations in seconds. The constraint has moved. The expensive
+            step is no longer writing software; it is keeping a product coherent
+            while software is written faster than any human can review it.
+          </p>
+
+          <h2>What breaks when code is the source of truth</h2>
+          <p>
+            When code is treated as the source of truth, every generated change
+            quietly redefines the product. There is no separate place that says
+            what the product is supposed to be, so the answer is reconstructed,
+            each time, from whatever code currently exists and whatever context
+            happened to be in the prompt.
+          </p>
+          <p>
+            Repeat that hundreds of times and the effects compound: architectural
+            drift, duplicated behavior, superseded paths that are never removed,
+            and decisions that live only in conversations that no one will read
+            again. The system passes its tests and still becomes harder to
+            change. This is not a tooling problem. It is a governance problem.
+          </p>
+
+          <h2>Product Knowledge as the permanent asset</h2>
+          <p>
+            The alternative is to name the thing that should govern implementation
+            and keep it outside the code. Call it Product Knowledge: the purpose,
+            boundaries, architecture, contracts, and verified decisions that
+            define a product. Code is a derived artifact of that knowledge —
+            important, but replaceable.
+          </p>
+          <pre><code>Product Knowledge        →  permanent asset
+Artificial Intelligence  →  current executor
+Source code              →  derived artifact</code></pre>
+          <p>
+            This reframing has a practical consequence. When the executor
+            changes — a new model, a new agent, a new team — the knowledge
+            remains. When the model improves, the architecture remains. When the
+            session ends, the decisions remain. The product survives its tools.
+          </p>
+
+          <h2>Governed execution instead of unstructured prompting</h2>
+          <p>
+            If knowledge governs implementation, execution must be bounded by that
+            knowledge rather than by whatever a prompt happens to contain. In
+            practice this means work advances through explicit units of change —
+            Intentions — each with a measurable outcome, and each executed as
+            verified steps rather than a single opaque generation.
+          </p>
+          <p>
+            The point is not ceremony. It is that every change has a defined
+            scope, a defined outcome, and a defined boundary between what AI may
+            decide and what a human must decide. Autonomy increases where it is
+            safe; governance holds where it matters.
+          </p>
+
+          <h2>Completion by evidence, not confidence</h2>
+          <p>
+            A generated change that compiles is not a completed change. Under this
+            model, work is complete when its promised, user-visible outcome
+            demonstrably exists — not when the tests pass, not when the
+            architecture looks right, and certainly not when the model reports
+            success. Evidence replaces assumption. Verification precedes trust.
+          </p>
+
+          <h2>A standard that evolves by evidence</h2>
+          <p>
+            The same discipline applies to the standard itself. It is versioned
+            and frozen: it does not grow because a new idea seems good. It grows
+            only when a real implementation shows that the current standard failed
+            to resolve a real problem, and only with a validation that certifies
+            the change. This is deliberately slow. Slow is how a standard stays
+            trustworthy.
+          </p>
+
+          <h2>An invitation, not a claim</h2>
+          <p>
+            This is an experimental v0.1. It is not offered as a finished answer.
+            It is offered as a structured hypothesis: that in AI-native
+            engineering, Product Knowledge — not code — is the asset worth
+            protecting, and that protecting it is a governance discipline that can
+            be specified, validated, and improved. The most useful thing you can
+            do with it is apply it to a real product and report where it breaks.
+          </p>
+
+          <div class="actions" style="margin-top: 28px">
+            <a
+              class="btn primary"
+              href="https://github.com/orivus/orivus-ai-product-framework"
+              >Read the standard on GitHub</a
+            >
+            <a class="btn ghost" href="why.html">Why this standard exists</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span>Orivus AI Product Framework · v0.1 · Apache-2.0</span>
+        <span class="links">
+          <a href="problem.html">Problem</a>
+          <a href="why.html">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html">Article</a>
+          <a href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

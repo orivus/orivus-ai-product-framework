@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why This Standard Exists — Orivus AI Product Framework</title>
+    <meta
+      name="description"
+      content="Why an open standard for AI-native product engineering is needed, and what it does and does not promise."
+    />
+    <link rel="icon" href="assets/orivus-logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="label">Orivus AI Product Framework</span>
+          <span class="label-short">Orivus</span>
+        </a>
+        <nav class="top">
+          <a href="problem.html">Problem</a>
+          <a href="why.html" class="active">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html">Article</a>
+          <a class="gh" href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom: 24px">
+        <div class="wrap">
+          <span class="eyebrow">5-minute read</span>
+          <h1>Why this standard<br /><span class="grad-text">exists</span></h1>
+          <p class="subtitle">
+            What becomes scarce when code generation becomes cheap.
+          </p>
+        </div>
+      </section>
+
+      <section style="padding-top: 8px">
+        <div class="wrap prose">
+          <h2>1. The situation changed</h2>
+          <p>
+            Artificial Intelligence now executes a large and growing share of
+            engineering work. It writes code, tests, and documentation at machine
+            speed. This is genuinely useful — and it quietly moves the risk.
+          </p>
+          <p>
+            When output was expensive, the scarce asset was the ability to
+            produce code. Now that output is cheap, the scarce asset is the
+            ability to keep a product coherent as it grows.
+          </p>
+
+          <h2>2. Why prompt-to-code fails at scale</h2>
+          <p>
+            <code>Problem → Prompt → Code</code> works for a single change.
+            Repeated hundreds of times, without a governing source of truth, it
+            produces architectural drift, duplicated behavior, and knowledge that
+            lives in chat logs rather than in the product. The code compiles; the
+            product decays.
+          </p>
+
+          <h2>3. The hypothesis</h2>
+          <p>
+            When AI writes most of the software, the most important asset stops
+            being the code and becomes the <strong>Product Knowledge</strong>:
+            the purpose, boundaries, architecture, contracts, and verified
+            decisions that let a product keep evolving.
+          </p>
+          <pre><code>Product Knowledge        →  permanent asset
+Artificial Intelligence  →  current executor
+Source code              →  derived artifact</code></pre>
+          <p>
+            When the executor changes, the knowledge remains. When the model
+            improves, the architecture remains. When the session ends, the
+            decisions remain.
+          </p>
+
+          <h2>4. What the standard proposes</h2>
+          <ul>
+            <li>
+              <strong>Governance.</strong> Humans govern the product; AI governs
+              engineering execution; Product Knowledge governs the code.
+            </li>
+            <li>
+              <strong>Governed execution.</strong> Work advances through
+              Intentions and verified milestones — not unstructured prompts.
+            </li>
+            <li>
+              <strong>Evidence.</strong> Completion is proven by evidence, not
+              claimed by confidence.
+            </li>
+            <li>
+              <strong>Evidence-based evolution.</strong> The standard itself only
+              changes when real implementations show it must.
+            </li>
+          </ul>
+
+          <h2>5. What it does not promise</h2>
+          <p>
+            It is not a prompt library, a coding agent, or an IDE plugin. It does
+            not replace architecture, testing, or domain design. It does not
+            depend on any specific product, vendor, or AI model.
+          </p>
+
+          <h2>6. Why now, and why experimental</h2>
+          <p>
+            This is v0.1 — deliberately frozen. It is published not because it is
+            finished, but because it has reached the point where the best way to
+            improve it is evidence from real use. It evolves through
+            implementation and observable results, not through opinion.
+          </p>
+
+          <div class="actions" style="margin-top: 28px">
+            <a class="btn primary" href="article.html">Read the full essay</a>
+            <a
+              class="btn ghost"
+              href="https://github.com/orivus/orivus-ai-product-framework"
+              >View the standard</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span>Orivus AI Product Framework · v0.1 · Apache-2.0</span>
+        <span class="links">
+          <a href="problem.html">Problem</a>
+          <a href="why.html">Why</a>
+          <a href="principles.html">Principles</a>
+          <a href="article.html">Article</a>
+          <a href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
