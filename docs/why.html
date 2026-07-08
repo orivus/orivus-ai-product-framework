@@ -6,7 +6,7 @@
     <title>Why This Standard Exists — Orivus AI Product Framework</title>
     <meta
       name="description"
-      content="Why an open standard for AI-native product engineering is needed, and what it does and does not promise."
+      content="Why an open standard for AI Product Engineering is needed, and what it does and does not promise."
     />
     <link rel="icon" href="assets/orivus-logo.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -22,7 +22,8 @@
         <nav class="top">
           <a href="problem.html">Problem</a>
           <a href="why.html" class="active">Why</a>
-          <a href="principles.html">Principles</a>
+          <a href="quickstart.html">Quick Start</a>
+          <a href="comparison.html">Compare</a>
           <a href="article.html">Article</a>
           <a class="gh" href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
         </nav>
@@ -70,20 +71,63 @@
             the purpose, boundaries, architecture, contracts, and verified
             decisions that let a product keep evolving.
           </p>
-          <pre><code>Product Knowledge        →  permanent asset
-Artificial Intelligence  →  current executor
-Source code              →  derived artifact</code></pre>
+          <div class="keylines" aria-label="Product Knowledge hierarchy">
+            <div class="line">
+              <span class="label">Product Knowledge</span>
+              <span class="arrow">→</span>
+              <span class="value">permanent asset</span>
+            </div>
+            <div class="line">
+              <span class="label">Artificial Intelligence</span>
+              <span class="arrow">→</span>
+              <span class="value">current executor</span>
+            </div>
+            <div class="line">
+              <span class="label">Source code</span>
+              <span class="arrow">→</span>
+              <span class="value">derived artifact</span>
+            </div>
+          </div>
           <p>
             When the executor changes, the knowledge remains. When the model
             improves, the architecture remains. When the session ends, the
             decisions remain.
           </p>
 
-          <h2>4. What the standard proposes</h2>
+          <h2>4. AI Product Engineering — the category</h2>
+          <p>
+            <strong>AI Product Engineering</strong> names the discipline: building
+            and evolving products when AI executes most of the implementation. It
+            is a category — not a normative term inside the standard.
+          </p>
+          <p>It is enabled through knowledge-driven engineering:</p>
+          <div class="category-stack" aria-label="Category, principle, implementation">
+            <div class="category-row">
+              <div class="category-label">Category</div>
+              <div class="category-desc">AI Product Engineering</div>
+            </div>
+            <div class="category-row">
+              <div class="category-label">Principle</div>
+              <div class="category-desc">Product Knowledge governs implementation</div>
+            </div>
+            <div class="category-row">
+              <div class="category-label">Implementation</div>
+              <div class="category-desc">Knowledge-driven engineering</div>
+            </div>
+          </div>
+          <p>
+            The standard's internal vocabulary — Intentions, Milestones, Product
+            Knowledge Synchronization, Governance Specification — implements that
+            principle. The category explains <em>why</em> the standard exists; the
+            principle explains <em>what</em> governs; the specifications explain
+            <em>how</em>.
+          </p>
+
+          <h2>5. What the standard proposes</h2>
           <ul>
             <li>
               <strong>Governance.</strong> Humans govern the product; AI governs
-              engineering execution; Product Knowledge governs the code.
+              engineering execution; Product Knowledge governs implementation.
             </li>
             <li>
               <strong>Governed execution.</strong> Work advances through
@@ -99,14 +143,14 @@ Source code              →  derived artifact</code></pre>
             </li>
           </ul>
 
-          <h2>5. What it does not promise</h2>
+          <h2>6. What it does not promise</h2>
           <p>
             It is not a prompt library, a coding agent, or an IDE plugin. It does
             not replace architecture, testing, or domain design. It does not
             depend on any specific product, vendor, or AI model.
           </p>
 
-          <h2>6. Why now, and why experimental</h2>
+          <h2>7. Why now, and why experimental</h2>
           <p>
             This is v0.1 — deliberately frozen. It is published not because it is
             finished, but because it has reached the point where the best way to
@@ -127,15 +171,24 @@ Source code              →  derived artifact</code></pre>
     </main>
 
     <footer class="site">
-      <div class="wrap">
-        <span>Orivus AI Product Framework · v0.1 · Apache-2.0</span>
-        <span class="links">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <div class="brand-statement compact">
+            <span class="brand-statement-mark">ORIVUS</span>
+            <span class="brand-statement-line accent">Product Knowledge</span>
+            <span class="brand-statement-line">governs implementation.</span>
+          </div>
+          <span class="footer-meta">v0.1 · Experimental · Apache-2.0</span>
+        </div>
+        <nav class="links" aria-label="Footer">
           <a href="problem.html">Problem</a>
           <a href="why.html">Why</a>
+          <a href="quickstart.html">Quick Start</a>
+          <a href="comparison.html">Compare</a>
           <a href="principles.html">Principles</a>
           <a href="article.html">Article</a>
           <a href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
-        </span>
+        </nav>
       </div>
     </footer>
   </body>

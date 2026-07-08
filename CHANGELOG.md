@@ -18,6 +18,28 @@ with supporting evidence from independent reference implementations.
 
 ---
 
+## [0.1.3] — 2026-07-07
+
+Website adoption improvements. Editorial only. **No change to normative
+behavior**; v0.1 remains frozen.
+
+### Added
+
+- `docs/assets/flow-diagram.svg` — official product evolution flow diagram.
+- `docs/quickstart.html` — five-minute path from Discovery to verified Outcome.
+- `docs/comparison.html` — positioning vs Scrum, DDD, OpenAPI, spec-driven
+  development, and AI coding assistants.
+- Home credibility section — FV-001, OSR-001, evidence-driven evolution.
+- Prominent tagline: *Product Knowledge governs implementation.*
+- **AI Product Engineering** as named concept on Home and Comparison pages.
+
+### Changed
+
+- Home hero CTA → Quick Start; official SVG diagram replaces text-only flow.
+- Navigation and footers across all site pages include Quick Start and Compare.
+
+---
+
 ## [0.1.2] — 2026-07-07
 
 Adoption experience. Editorial and documentation only. **No change to normative

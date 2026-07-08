@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 720" role="img" aria-labelledby="flowTitle flowDesc">
+  <title id="flowTitle">Orivus Product Evolution Flow</title>
+  <desc id="flowDesc">From product opportunity through governed AI engineering to institutional knowledge</desc>
+  <defs>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a44"/>
+      <stop offset="100%" stop-color="#121218"/>
+    </linearGradient>
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="90">
+      <path d="M0,0 L10,5 L0,10 Z" fill="rgba(255,255,255,0.4)"/>
+    </marker>
+    <marker id="arrow-left" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="180">
+      <path d="M0,0 L10,5 L0,10 Z" fill="rgba(255,255,255,0.25)"/>
+    </marker>
+  </defs>
+  <rect width="420" height="720" fill="#000000"/>
+
+  <!-- Nodes -->
+  <g font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">
+    <rect x="60" y="24" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+    <text x="210" y="56" fill="#ffffff" font-size="15" font-weight="600">Product Opportunity</text>
+    <text x="210" y="78" fill="#7a7a86" font-size="12">A real need appears</text>
+
+    <rect x="60" y="120" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+    <text x="210" y="152" fill="#ffffff" font-size="15" font-weight="600">Product Knowledge</text>
+    <text x="210" y="174" fill="#7a7a86" font-size="12">Governed, durable understanding</text>
+
+    <rect x="60" y="216" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+    <text x="210" y="248" fill="#ffffff" font-size="15" font-weight="600">Intention</text>
+    <text x="210" y="270" fill="#7a7a86" font-size="12">Smallest governed unit of change</text>
+
+    <rect x="60" y="312" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+    <text x="210" y="344" fill="#ffffff" font-size="15" font-weight="600">Governed AI Engineering</text>
+    <text x="210" y="366" fill="#7a7a86" font-size="12">Verified, bounded execution</text>
+
+    <rect x="60" y="408" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+    <text x="210" y="440" fill="#ffffff" font-size="15" font-weight="600">Verified Product</text>
+    <text x="210" y="462" fill="#7a7a86" font-size="12">Outcome proven by evidence</text>
+
+    <rect x="60" y="504" width="300" height="72" rx="14" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+    <text x="210" y="536" fill="#ffffff" font-size="15" font-weight="600">Institutional Knowledge</text>
+    <text x="210" y="558" fill="#7a7a86" font-size="12">The product becomes easier to evolve</text>
+
+    <text x="210" y="640" fill="#b4b4bc" font-size="13" font-weight="500" letter-spacing="0.12em">PRODUCT KNOWLEDGE GOVERNS IMPLEMENTATION</text>
+  </g>
+
+  <!-- Connectors (drawn after nodes, centered at x=210) -->
+  <g stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="210" y1="98" x2="210" y2="116" marker-end="url(#arrow-down)"/>
+    <line x1="210" y1="194" x2="210" y2="212" marker-end="url(#arrow-down)"/>
+    <line x1="210" y1="290" x2="210" y2="308" marker-end="url(#arrow-down)"/>
+    <line x1="210" y1="386" x2="210" y2="404" marker-end="url(#arrow-down)"/>
+    <line x1="210" y1="482" x2="210" y2="500" marker-end="url(#arrow-down)"/>
+  </g>
+
+  <!-- Feedback loop -->
+  <path d="M 362 540 C 398 540, 398 156, 362 156" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow-left)"/>
+  <text x="388" y="350" fill="#4a4a54" font-size="10" font-family="system-ui, -apple-system, sans-serif" transform="rotate(90 388 350)">strengthens next cycle</text>
+</svg>

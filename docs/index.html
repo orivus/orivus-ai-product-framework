@@ -6,7 +6,7 @@
     <title>Orivus AI Product Framework</title>
     <meta
       name="description"
-      content="An experimental open standard for AI-native product engineering. Product Knowledge governs implementation."
+      content="An experimental open standard for AI Product Engineering. Product Knowledge governs implementation."
     />
     <link rel="icon" href="assets/orivus-logo.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -22,7 +22,8 @@
         <nav class="top">
           <a href="problem.html">Problem</a>
           <a href="why.html">Why</a>
-          <a href="principles.html">Principles</a>
+          <a href="quickstart.html">Quick Start</a>
+          <a href="comparison.html">Compare</a>
           <a href="article.html">Article</a>
           <a class="gh" href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
         </nav>
@@ -33,29 +34,27 @@
       <!-- Hero -->
       <section class="hero">
         <div class="wrap">
-          <div class="hero-lockup reveal">
-            <span class="hero-orb" aria-hidden="true"></span>
-            <span class="hero-wordmark">ORIVUS</span>
+          <div class="hero-brand reveal">
+            <div class="hero-lockup">
+              <span class="hero-orb" aria-hidden="true"></span>
+              <span class="hero-wordmark">ORIVUS</span>
+            </div>
+            <div class="brand-statement" aria-label="Product Knowledge governs implementation">
+              <span class="brand-statement-line accent">Product Knowledge</span>
+              <span class="brand-statement-line">governs implementation.</span>
+            </div>
           </div>
           <span class="eyebrow reveal d1">v0.1 · Experimental · Apache-2.0</span>
           <h1 class="reveal d2">
-            An open standard for<br /><span class="grad-text"
-              >AI-native product engineering</span
-            >
+            An open standard for<br /><span class="grad-text">AI Product Engineering</span>
           </h1>
           <p class="subtitle reveal d3">
-            AI can generate code faster than ever. It cannot preserve product
-            knowledge, architectural integrity, or long-term maintainability by
-            itself. This standard defines how humans and AI build products
-            without losing that knowledge.
+            A standard to govern how products evolve when AI executes most of the
+            engineering — without losing product knowledge along the way.
           </p>
           <div class="actions reveal d4">
-            <a class="btn primary" href="why.html">Why this standard exists</a>
-            <a
-              class="btn ghost"
-              href="https://github.com/orivus/orivus-ai-product-framework"
-              >View on GitHub</a
-            >
+            <a class="btn primary" href="quickstart.html">Quick Start — 5 minutes</a>
+            <a class="btn ghost" href="why.html">Why this standard exists</a>
           </div>
 
           <div class="code-card reveal d4" style="margin-top: 44px">
@@ -67,55 +66,98 @@ AI executes engineering.</code></pre>
         </div>
       </section>
 
-      <!-- Flow -->
+      <!-- Three questions -->
+      <section>
+        <div class="wrap">
+          <div class="grid cols-3">
+            <div class="card">
+              <div class="k">1 · What changed</div>
+              <h3>Software output is no longer scarce</h3>
+              <p>
+                AI can produce code, tests, and documentation at machine speed.
+                Generating software is no longer the expensive step.
+              </p>
+            </div>
+            <div class="card">
+              <div class="k">2 · What broke</div>
+              <h3>Product coherence became the constraint</h3>
+              <p>
+                When output is cheap, the scarce asset is preserving product
+                knowledge — architecture, decisions, and verified understanding —
+                as the product grows.
+              </p>
+            </div>
+            <div class="card">
+              <div class="k">3 · What the framework proposes</div>
+              <h3>A standard to govern evolution</h3>
+              <p>
+                An open standard for how humans and AI build products without
+                losing knowledge: governed Intentions, verified outcomes, and
+                evidence at every gate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Official diagram -->
       <section>
         <div class="wrap">
           <div class="section-head center">
             <h2>How a product evolves</h2>
             <p>One governed path from opportunity to institutional knowledge.</p>
           </div>
-          <div class="flow measure" style="margin: 0 auto">
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Product Opportunity</h3>
-                <p>A real need appears — not yet a plan.</p>
-              </div>
+          <div class="flow-diagram-wrap">
+            <img
+              src="assets/flow-diagram.svg"
+              alt="Product evolution flow: Product Opportunity, Product Knowledge, Intention, Governed AI Engineering, Verified Product, Institutional Knowledge"
+              width="420"
+              height="720"
+            />
+          </div>
+          <p class="flow-diagram-caption measure" style="margin: 0 auto">
+            The official Orivus product evolution flow
+          </p>
+        </div>
+      </section>
+
+      <!-- Credibility -->
+      <section>
+        <div class="wrap">
+          <div class="section-head center">
+            <h2>Evidence, not claims</h2>
+            <p>
+              Experimental does not mean theoretical. Validated through Reference
+              Validation (FV-001) and Open Source Release Audit (OSR-001).
+            </p>
+          </div>
+          <div class="cred-grid">
+            <div class="cred-card">
+              <div class="k">Reference validation</div>
+              <h3>FV-001 PASS</h3>
+              <p>
+                Sequential milestone execution under the Milestone Transaction
+                Protocol — verified with per-milestone evidence.
+              </p>
+              <span class="status">Validated</span>
             </div>
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Product Knowledge</h3>
-                <p>The opportunity becomes governed, durable knowledge.</p>
-              </div>
+            <div class="cred-card">
+              <div class="k">Release readiness</div>
+              <h3>OSR-001 PASS</h3>
+              <p>
+                Open-source release audit: neutrality, adoption path, and
+                documentation completeness for v0.1.
+              </p>
+              <span class="status">Audited</span>
             </div>
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Intention</h3>
-                <p>The smallest governed unit of product change.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Governed AI Engineering</h3>
-                <p>AI executes within explicit boundaries, verified at each step.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Verified Product</h3>
-                <p>Completion is proven by evidence, not by confidence.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num"></div>
-              <div>
-                <h3>Institutional Knowledge</h3>
-                <p>Every Intention strengthens the next one.</p>
-              </div>
+            <div class="cred-card">
+              <div class="k">Evolution model</div>
+              <h3>Evidence-driven</h3>
+              <p>
+                v0.2 and beyond advance only through friction and outcomes
+                reported by real adopting teams — not through new theory.
+              </p>
+              <span class="status">Governed</span>
             </div>
           </div>
         </div>
@@ -141,16 +183,18 @@ AI executes engineering.</code></pre>
             </div>
             <div class="card">
               <div class="k">The shift</div>
-              <h3>Why you need this</h3>
+              <h3>AI Product Engineering</h3>
               <p style="margin-top: 10px">
-                If a meaningful share of your engineering is executed by AI, your
-                most durable asset is no longer the code — it is the
-                <strong>Product Knowledge</strong> that lets the product keep
-                evolving after the session, the model, or the tool changes.
+                The industry talks about AI coding and agentic development.
+                The Orivus AI Product Framework names a different category:
+                <strong>AI Product Engineering</strong> — evolving products when
+                AI executes most of the implementation. The principle underneath is
+                unchanged: Product Knowledge governs implementation.
               </p>
               <p>
-                This standard makes that knowledge governable, verifiable, and
-                portable.
+                Your most durable asset is no longer the code. It is the
+                <strong>Product Knowledge</strong> that lets the product keep
+                evolving after the session, the model, or the tool changes.
               </p>
             </div>
           </div>
@@ -199,8 +243,16 @@ AI executes engineering.</code></pre>
               </thead>
               <tbody>
                 <tr>
+                  <td>Start in five minutes</td>
+                  <td><a href="quickstart.html">Quick Start</a></td>
+                </tr>
+                <tr>
                   <td>Understand why the standard exists</td>
                   <td><a href="why.html">Why this standard exists</a></td>
+                </tr>
+                <tr>
+                  <td>See how the framework compares to other approaches</td>
+                  <td><a href="comparison.html">Comparison</a></td>
                 </tr>
                 <tr>
                   <td>See the standard applied to a product</td>
@@ -237,8 +289,8 @@ AI executes engineering.</code></pre>
             <h2>An experimental standard</h2>
             <p>
               Published to be studied, adopted, tested, and improved through real
-              use. It evolves only through evidence from real implementations —
-              not through new theory.
+              use. Product Knowledge governs implementation — validated through
+              FV-001 and OSR-001, not marketing.
             </p>
             <div class="actions" style="justify-content: center">
               <a
@@ -246,7 +298,7 @@ AI executes engineering.</code></pre>
                 href="https://github.com/orivus/orivus-ai-product-framework"
                 >Explore the standard</a
               >
-              <a class="btn ghost" href="principles.html">Core Principles</a>
+              <a class="btn ghost" href="comparison.html">How the framework compares</a>
             </div>
           </div>
         </div>
@@ -254,15 +306,24 @@ AI executes engineering.</code></pre>
     </main>
 
     <footer class="site">
-      <div class="wrap">
-        <span>Orivus AI Product Framework · v0.1 · Apache-2.0</span>
-        <span class="links">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <div class="brand-statement compact">
+            <span class="brand-statement-mark">ORIVUS</span>
+            <span class="brand-statement-line accent">Product Knowledge</span>
+            <span class="brand-statement-line">governs implementation.</span>
+          </div>
+          <span class="footer-meta">v0.1 · Experimental · Apache-2.0</span>
+        </div>
+        <nav class="links" aria-label="Footer">
           <a href="problem.html">Problem</a>
           <a href="why.html">Why</a>
+          <a href="quickstart.html">Quick Start</a>
+          <a href="comparison.html">Compare</a>
           <a href="principles.html">Principles</a>
           <a href="article.html">Article</a>
           <a href="https://github.com/orivus/orivus-ai-product-framework">GitHub</a>
-        </span>
+        </nav>
       </div>
     </footer>
   </body>

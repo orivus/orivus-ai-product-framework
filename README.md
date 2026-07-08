@@ -164,7 +164,9 @@ Friction found during adoption is recorded in [FRAMEWORK_FEEDBACK.md](FRAMEWORK_
 
 | If you want to… | Read |
 |-----------------|------|
+| Start in five minutes | [Quick Start](https://orivus.github.io/orivus-ai-product-framework/quickstart.html) |
 | Understand why the standard exists | [Why this standard exists](https://orivus.github.io/orivus-ai-product-framework/why.html) · [MANIFESTO.md](MANIFESTO.md) |
+| See how Orivus compares to other approaches | [Comparison](https://orivus.github.io/orivus-ai-product-framework/comparison.html) |
 | See the standard applied to a product | [examples/inventory-platform/](examples/inventory-platform/README.md) |
 | Read the essay | [Why Product Knowledge Matters in AI-Native Engineering](https://orivus.github.io/orivus-ai-product-framework/article.html) |
 | Learn the conceptual model | [framework/INTRODUCTION.md](framework/INTRODUCTION.md) |

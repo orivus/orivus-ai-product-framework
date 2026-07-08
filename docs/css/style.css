@@ -158,37 +158,43 @@ header.site .wrap {
   flex: none;
 }
 
-/* CSS fallback mark when no image — concentric eye */
+/* Orivus orb — concentric rings + glowing core (header + hero) */
+.brand .mark,
+.hero-orb {
+  position: relative;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  flex: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 .brand .mark {
   width: 36px;
   height: 36px;
-  flex: none;
-  position: relative;
-  border-radius: 50%;
-  background: var(--metallic);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    var(--shadow-sm);
 }
 
-.brand .mark::before {
+.brand .mark::before,
+.hero-orb::before {
   content: "";
   position: absolute;
-  inset: 7px;
+  inset: 26%;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.brand .mark::after {
+.brand .mark::after,
+.hero-orb::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6px;
-  height: 6px;
-  margin: -3px 0 0 -3px;
+  width: 22%;
+  height: 22%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--white);
-  box-shadow: 0 0 12px var(--glow), 0 0 24px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px var(--glow), 0 0 28px rgba(255, 255, 255, 0.3);
 }
 
 .brand .label {
@@ -199,7 +205,7 @@ header.site .wrap {
   display: inline;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 960px) {
   .brand .label {
     display: inline;
   }
@@ -212,7 +218,9 @@ nav.top {
   display: flex;
   align-items: center;
   gap: 2px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 nav.top a {
@@ -259,12 +267,16 @@ section {
 }
 
 /* Hero lockup: icon + wordmark, no boxed logo */
+.hero-brand {
+  margin: 0 auto 32px;
+}
+
 .hero-lockup {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 0 auto 36px;
+  margin: 0 auto;
 }
 
 .hero-wordmark {
@@ -279,31 +291,6 @@ section {
 .hero-orb {
   width: clamp(40px, 9vw, 52px);
   height: clamp(40px, 9vw, 52px);
-  position: relative;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.28);
-  flex: none;
-}
-
-.hero-orb::before {
-  content: "";
-  position: absolute;
-  inset: 26%;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.hero-orb::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 22%;
-  height: 22%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: var(--white);
-  box-shadow: 0 0 12px var(--glow), 0 0 28px rgba(255, 255, 255, 0.3);
 }
 
 .hero .badges {
@@ -458,6 +445,8 @@ h3 {
 /* ---------- Prose ---------- */
 .prose {
   max-width: var(--measure);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .prose p,
@@ -471,6 +460,21 @@ h3 {
 
 .prose h3 {
   margin-top: 28px;
+}
+
+.prose ul {
+  margin: 16px 0;
+  padding-left: 1.35em;
+  list-style-position: outside;
+}
+
+.prose li {
+  margin-bottom: 14px;
+  padding-left: 0.4em;
+}
+
+.prose li::marker {
+  color: var(--grey-300);
 }
 
 a {
@@ -650,6 +654,45 @@ pre code {
   font-size: inherit;
 }
 
+/* ---------- Key lines (hypothesis block) ---------- */
+.keylines {
+  background: var(--grey-700);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 20px 0;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.keylines .line {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.keylines .line + .line {
+  margin-top: 6px;
+}
+
+.keylines .label {
+  flex: 0 0 auto;
+  min-width: 13.5em;
+  color: var(--grey-100);
+  white-space: nowrap;
+}
+
+.keylines .arrow {
+  flex: 0 0 auto;
+  color: var(--grey-300);
+}
+
+.keylines .value {
+  flex: 1 1 auto;
+  color: var(--grey-200);
+}
+
 .code-card {
   background: var(--grey-700);
   border: 1px solid var(--border-strong);
@@ -792,9 +835,24 @@ footer.site {
 footer.site .wrap {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+footer.site .wrap.footer-inner {
   align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-meta {
+  font-size: 12px;
+  color: var(--grey-400);
 }
 
 footer.site a {
@@ -810,11 +868,294 @@ footer.site .links {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .note {
   color: var(--muted);
   font-size: 15px;
+}
+
+/* ---------- Brand statement — core tagline lockup ---------- */
+.brand-statement {
+  text-align: center;
+  margin: 22px auto 0;
+  max-width: 520px;
+}
+
+.brand-statement-line {
+  display: block;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.brand-statement-line.accent {
+  color: var(--white);
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  font-weight: 600;
+}
+
+.brand-statement-line:not(.accent) {
+  color: var(--grey-200);
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.hero-brand .brand-statement {
+  margin-top: 18px;
+}
+
+.brand-statement.compact {
+  text-align: left;
+  margin: 0;
+  max-width: none;
+}
+
+.brand-statement.compact .brand-statement-mark {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-indent: 0.28em;
+  color: var(--grey-300);
+  margin-bottom: 4px;
+}
+
+.brand-statement.compact .brand-statement-line.accent {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.brand-statement.compact .brand-statement-line:not(.accent) {
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+/* ---------- Official flow diagram ---------- */
+.flow-diagram-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 40px;
+  max-width: 420px;
+}
+
+.flow-diagram-wrap img,
+.flow-diagram-wrap object {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flow-diagram-caption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Credibility grid ---------- */
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cred-card {
+  background: linear-gradient(145deg, #1a1a20 0%, #0a0a0e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px 22px;
+}
+
+.cred-card .k {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.cred-card h3 {
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.cred-card p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.cred-card .status {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.85;
+}
+
+/* ---------- Comparison page ---------- */
+.compare-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 32px auto;
+  max-width: 680px;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 110px 28px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.compare-row.highlight {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+}
+
+.compare-label {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+}
+
+.compare-arrow {
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.compare-desc {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ---------- Category stack (Why page) ---------- */
+.category-stack {
+  margin: 20px 0 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--grey-700);
+  overflow: hidden;
+}
+
+.category-row {
+  display: grid;
+  grid-template-columns: 9.5em 1fr;
+  gap: 16px;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: baseline;
+}
+
+.category-row:last-child {
+  border-bottom: none;
+}
+
+.category-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+}
+
+.category-desc {
+  font-size: 15px;
+  color: var(--grey-100);
+  font-weight: 500;
+}
+
+.compare-table th,
+.compare-table td {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* ---------- Quick Start steps ---------- */
+.qs-steps {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.qs-steps::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  bottom: 24px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.qs-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  align-items: start;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.qs-step:last-child {
+  padding-bottom: 0;
+}
+
+.qs-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--white);
+  background: linear-gradient(145deg, #2a2a32 0%, #121218 100%);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.qs-step.done .qs-num {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: linear-gradient(145deg, #2a2a32 0%, #121218 100%);
+}
+
+.qs-body {
+  position: relative;
+  z-index: 1;
+}
+
+.qs-body h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+}
+
+.qs-body p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .center {
@@ -850,10 +1191,74 @@ footer.site .links {
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  header.site .wrap {
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 12px;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand .mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  nav.top a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  nav.top a.gh {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 820px) {
   .grid.cols-3,
   .grid.cols-2 {
     grid-template-columns: 1fr;
+  }
+  .cred-grid {
+    grid-template-columns: 1fr;
+  }
+  .keylines .line {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+  .keylines .line:last-child {
+    margin-bottom: 0;
+  }
+  .keylines .label {
+    text-align: left;
+  }
+  .keylines .arrow {
+    display: none;
+  }
+  .category-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .compare-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 20px 16px;
+  }
+  .compare-label {
+    text-align: center;
+  }
+  .compare-arrow {
+    line-height: 1;
   }
 }
 
