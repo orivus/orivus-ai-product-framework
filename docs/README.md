@@ -18,6 +18,8 @@ Live site: <https://orivus.github.io/orivus-ai-product-framework/>
 | `principles.html` | Core Principles (CP-1…CP-11 summary) |
 | `article.html` | Essay: Why Product Knowledge Matters in AI-Native Engineering |
 | `assets/flow-diagram.svg` | Official product evolution flow diagram |
+| `assets/og-image.png` | Open Graph / social preview (1200×630) |
+| `assets/orivus-logo.png` | Favicon and brand mark |
 | `css/style.css` | Styling (Orivus dark, system fonts) |
 | `.nojekyll` | Disables Jekyll processing; serves files as-is |
 
