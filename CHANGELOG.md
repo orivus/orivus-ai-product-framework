@@ -12,9 +12,28 @@ Versioning policy: see [ROADMAP.md](ROADMAP.md#versioning-and-compatibility).
 
 ## [Unreleased]
 
-Nothing yet. v0.1 is frozen. Changes accumulate as observations in
-[FRAMEWORK_FEEDBACK.md](FRAMEWORK_FEEDBACK.md) and are considered for v0.2 only
-with supporting evidence from independent reference implementations.
+Nothing yet.
+
+---
+
+## [0.2.0] — 2026-07-12
+
+Value-Driven Milestones. Validated by FV-002 PASS (human approved). Evidence: OBS-005.
+
+### Added
+
+- **GS-14 / GR-14** — Milestone as verifiable product value unit; Implementation Tasks are not Milestones.
+- **AS-16, AS-17** — no PASS without demonstrable Product Value; no LOCK without plan fields.
+- [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](templates/IMPLEMENTATION_PLAN_TEMPLATE.md).
+- **FV-002** — Value-Driven Milestones Reference Validation **PASS**.
+
+### Changed
+
+- **GS-13 / GR-13** — removed infrastructure milestone exception.
+- **Product Specification §8.6** — milestone definition.
+- **Milestone Audit** — evaluates product value existence.
+- [examples/inventory-platform/IMPLEMENTATION_PLAN-001.md](examples/inventory-platform/IMPLEMENTATION_PLAN-001.md).
+- **CP-7**, **Canonical Workflow**, **GOVERNANCE_RULES**.
 
 ---
 

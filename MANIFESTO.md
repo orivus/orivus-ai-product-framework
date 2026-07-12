@@ -4,8 +4,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Experimental — Validated |
 
 ---
 

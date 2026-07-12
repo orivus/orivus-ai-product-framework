@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Normative — Operational refinement |
+| Version | 0.2 |
+| Status | Normative |
 | Scope | Technology-independent · Model-independent · Platform-independent |
 
 Normative specification defining how a framework-conformant agent MUST execute a single Milestone as an atomic transaction.
@@ -165,13 +165,18 @@ Mechanical failures MUST be resolved through Self-Healing before AUDIT.
 
 Milestone Audit evaluates the locked milestone against:
 
-- Implementation Plan deliverables;
-- AI Context acceptance criteria;
-- ADR/RFC constraints for that capability.
+- Product Value and Observable Result declared in the Implementation Plan;
+- evidence that the promised product value is demonstrable for the product consumer;
+- AI Context scope and constraints;
+- ADR/RFC constraints for that value.
+
+The primary audit question is: **does the promised product value exist?** — not merely whether technical artifacts were implemented.
 
 Verdicts: **PASS** or **REJECT** only.
 
 On REJECT: remediate the locked milestone and repeat IMPLEMENT → VERIFY → AUDIT. The agent MUST NOT proceed to NEXT.
+
+A Milestone MUST receive REJECT when Product Value is undefined or not demonstrable through declared evidence.
 
 ---
 
@@ -208,10 +213,12 @@ Each milestone evidence file MUST include at minimum:
 | Section | Content |
 |---------|---------|
 | Milestone identity | Identifier and title |
-| Scope | Deliverables implemented in this transaction |
-| Acceptance criteria | Criteria evaluated |
+| Product Value | Value promised for this milestone |
+| Observable Result | What was observed when value was demonstrated |
+| Scope | Implementation Tasks completed in this transaction |
+| Evidence | Automated and human verification executed |
 | Validation | Commands run and outcome (VERIFIED) |
-| Audit verdict | PASS or REJECT with rationale |
+| Audit verdict | PASS or REJECT with rationale — value demonstrable or not |
 | Living State update | Plan fields updated |
 
 Retroactive evidence created after batch implementation MUST NOT support Milestone PASS.

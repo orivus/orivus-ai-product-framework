@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Informative |
 
 The Canonical Workflow defines the standard engineering workflow prescribed by the Orivus AI Product Framework.
 
@@ -120,7 +120,20 @@ Only VERIFIED project states may proceed to governance.
 
 ## 4. Milestone Governance
 
+A Milestone is the smallest governable unit of **verifiable product value** toward
+the Product Outcome. Each Milestone is a partial realization of the same
+objective:
+
+```
+Product Outcome
+    → Milestone 1 (+ value)
+    → Milestone 2 (+ value)
+    → Product Outcome complete
+```
+
 Once VERIFIED is achieved, AI executes the Milestone Audit.
+
+The audit asks: **does the promised product value exist?**
 
 ```
 Project VERIFIED
@@ -185,7 +198,7 @@ Remediation READY FOR HUMAN REVIEW
 
 The Intention Audit verifies:
 
-- **Product Outcome realization (GR-13)** — the user-visible capability exists; infrastructure-only delivery MUST FAIL audit
+- **Product Outcome realization (GR-13)** — the user-visible value exists
 - Product Outcome definition alignment
 - Product Foundation alignment
 - Architecture integrity
@@ -195,13 +208,14 @@ The Intention Audit verifies:
 - Evidence completeness
 - Production readiness
 
-### Infrastructure vs Product Outcome
+### Value per Milestone
 
-Milestones may deliver means: sessions, warm-up, buffer pools, runtime constraints, certification harnesses, deterministic stand-ins.
+Each Milestone MUST deliver verifiable product value toward the Product Outcome
+(GR-14 / GS-14). Milestone Audit MUST REJECT when the promised value is not
+demonstrable — even if technical artifacts are complete.
 
-Those MAY reach PASS without closing the Intention.
-
-An Intention closes only when the **Product Outcome** named in the Intention document is observable by the user (GR-13).
+An Intention closes only when the **Product Outcome** named in the Intention
+document is observable by the product consumer (GR-13).
 
 ---
 

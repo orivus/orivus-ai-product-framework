@@ -2,15 +2,15 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Informative |
 | Normative Counterpart | [specifications/GOVERNANCE_SPECIFICATION.md](../specifications/GOVERNANCE_SPECIFICATION.md) |
 
 Governance Rules define the operational boundaries of the Orivus AI Product Framework.
 
 Unlike Core Principles, which describe philosophy, Governance Rules define mandatory constraints that preserve product integrity during AI-assisted engineering.
 
-**For enforceable requirements, see [Governance Specification](../specifications/GOVERNANCE_SPECIFICATION.md) (GS-1 through GS-13).**
+**For enforceable requirements, see [Governance Specification](../specifications/GOVERNANCE_SPECIFICATION.md) (GS-1 through GS-14).**
 
 These rules are the contract of the standard.
 
@@ -33,6 +33,7 @@ Whenever a Governance Rule conflicts with implementation convenience, the Govern
 | Markdown Is Source of Truth | GR-11 |
 | Architecture Has Authority | GR-12 |
 | Product Outcome Realization | GR-13 |
+| Verifiable Product Value per Milestone | GR-14 |
 
 ---
 
@@ -193,12 +194,30 @@ No implementation may silently redefine the product.
 
 A Product Intention cannot be considered implemented — and MUST NOT reach Intention Audit, Human Review, or **Closed** — unless its promised **user-visible Product Outcome exists**.
 
-Milestones may deliver infrastructure, architecture, certification scaffolding, or deterministic test doubles. Those are means, not the Outcome.
-
-Passing tests, perfect architecture, and complete RFC coverage do **not** substitute for the capability the Intention name promises.
+Passing tests, perfect architecture, and complete RFC coverage do **not** substitute for the value the Intention promises.
 
 **Intention Audit MUST FAIL** when the Product Outcome is absent, even if every Milestone in the Implementation Plan has PASS.
 
-**Example:** An Intention named *Real Neural Speech Engine* does not close until a user can hear intelligible neural speech through the production path — not when only session management, warm-up, and tracer-backed certification exist.
+Per-milestone value is governed by [GR-14](#gr-14--verifiable-product-value-per-milestone).
+
+**Example:** An Intention named *Real-Time Stock Visibility* does not close until an operator can query current stock through the public API — not when only the domain model and repository layer exist.
 
 **Normative:** [GS-13](../specifications/GOVERNANCE_SPECIFICATION.md#gs-13--product-outcome-realization)
+
+---
+
+## GR-14 — Verifiable Product Value per Milestone
+
+A Milestone is the smallest governable unit of **verifiable product value** toward the Product Outcome — not a unit of technical execution.
+
+Every Milestone MUST declare Product Value, Consumer, Observable Result, Evidence, and Implementation Tasks before execution begins.
+
+A Milestone MUST NOT receive PASS unless the Product Value defined for that Milestone is demonstrable for the product consumer.
+
+Internal implementation work (layers, modules, adapters, packaging) MAY exist only as **Implementation Tasks** within a value-driven Milestone.
+
+Milestone Audit asks: **does the promised product value exist?** — not merely whether technical artifacts were implemented.
+
+**Example:** A Milestone titled *Repository Layer* with no Product Value is non-conformant. A Milestone titled *Operator can query stock* with repository and API as Implementation Tasks is conformant.
+
+**Normative:** [GS-14](../specifications/GOVERNANCE_SPECIFICATION.md#gs-14--verifiable-product-value-per-milestone)

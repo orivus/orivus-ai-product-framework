@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Informative |
 
 The Orivus AI Product Framework is built upon a small set of immutable principles.
 
@@ -109,7 +109,9 @@ Every Milestone must reach a VERIFIED state before audit.
 
 Every Intention must satisfy its expected Product Outcome before completion.
 
-**Product Outcome Realization (GR-13 / GS-13):** Milestones may certify infrastructure; an Intention closes only when the user-visible capability promised by the Intention exists. Tests and architecture alone are insufficient.
+**Product Outcome Realization (GR-13 / GS-13):** An Intention closes only when the user-visible value promised by the Intention exists. Tests and architecture alone are insufficient.
+
+**Verifiable product value per Milestone (GR-14 / GS-14):** A Milestone is the smallest governable unit of verifiable product value toward the Product Outcome — not a unit of technical execution. A Milestone MUST NOT receive PASS unless the Product Value defined in the Implementation Plan is demonstrable for the product consumer.
 
 Verified knowledge governs engineering. Conversations do not.
 
@@ -165,4 +167,4 @@ AI-generated software MUST converge toward simplicity over time, not accumulate 
 
 Product Convergence is a philosophy of product evolution, not merely dead-code removal. Each Intention should reduce entropy: fewer superseded paths, clearer Product Knowledge, tighter alignment with Product Foundation.
 
-Reference Validation FV-005 (planned) will certify Dead Code Convergence behavior under this principle.
+Reference Validation FV-006 (planned) will certify Dead Code Convergence behavior under this principle.
