@@ -5,21 +5,41 @@
 | Product | Inventory Platform (example) |
 | Intention | 001 — Real-Time Stock Visibility API |
 | Status | Example — illustrative only |
+| Framework | v0.2 — value-driven milestones |
 | Outcome | An operator can query current stock over HTTP |
 
-> Teaching artifact. It shows how one Intention is planned into milestones and how
-> **Living State** tracks execution. It is not real product code.
+> Teaching artifact. It shows how one Intention is planned into **value-driven
+> milestones** and how **Living State** tracks execution. It is not real product
+> code.
+
+Template: [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](../../templates/IMPLEMENTATION_PLAN_TEMPLATE.md).
+
+---
+
+## Product Outcome
+
+An operator can request current stock for a warehouse and SKU and receive an
+accurate, current quantity through the public HTTP API.
+
+## Milestone Progression
+
+```
+Product Outcome (operator can query stock)
+    → M1 (+ operator can query one known item)
+    → M2 (+ operator can query any item in catalog)
+    → M3 (+ operator receives not-found for unknown items)
+    → Product Outcome complete
+```
 
 ---
 
 ## Living State
 
-| Milestone | Outcome | Status |
-|-----------|---------|--------|
-| M1 — Query Contract | Stable request/response shape | `PASS` |
-| M2 — Stock Lookup Domain | Pure lookup logic over the stock store | `PASS` |
-| M3 — HTTP Endpoint | Public endpoint wired to the domain | `PASS` |
-| M4 — Outcome Certification | Operator can actually query stock (GR-13) | `PASS` |
+| Milestone | Product Value (summary) | Status |
+|-----------|-------------------------|--------|
+| M1 — Operator can query stock for known items | Accurate quantity for valid warehouse + SKU | `PASS` |
+| M2 — Operator can query any catalog item | Same contract for full catalog | `PASS` |
+| M3 — Operator receives not-found for unknown items | Clear absence for invalid SKU | `PASS` |
 
 **Current milestone:** — (complete)
 
@@ -42,35 +62,98 @@ LOCK → IMPLEMENT → VERIFY → AUDIT → PASS → UPDATE PLAN → NEXT
 
 Exactly one milestone is open at a time. No batching.
 
+Milestone Audit asks: **does the promised product value exist?**
+
 ---
 
-## Milestone M1 — Query Contract
+## Milestone M1 — Operator can query stock for known items
 
-- **Scope:** define the request (warehouse, SKU) and response (quantity, or not found).
-- **Acceptance:** contract documented; shape stable; no implementation leakage.
+### Product Value
 
-## Milestone M2 — Stock Lookup Domain
+An operator can retrieve the current quantity for a valid warehouse and SKU that
+exists in the stock store.
 
-- **Scope:** pure function that resolves a quantity from the stock store.
-- **Acceptance:** correct quantity for known items; well-defined absence for unknown items; no HTTP concerns in the domain.
+### Consumer
 
-## Milestone M3 — HTTP Endpoint
+Warehouse operator using the inventory HTTP API.
 
-- **Scope:** expose the domain through the public contract over HTTP.
-- **Acceptance:** valid request returns current quantity; unknown item returns "not found"; endpoint matches the M1 contract.
+### Observable Result
 
-## Milestone M4 — Outcome Certification
+`GET /stock?warehouse=W1&sku=SKU-001` returns `200` with the current quantity.
 
-- **Scope:** demonstrate the Product Outcome end to end.
-- **Acceptance (GR-13):** an operator can request stock for a warehouse and SKU and receive an accurate, current quantity. Passing unit tests alone would **not** satisfy this milestone.
+### Evidence
+
+- Integration test: known warehouse + SKU returns accurate quantity
+- Operator smoke test: curl against running service
+
+### Implementation Tasks
+
+- Query contract (request/response shape)
+- Stock lookup domain function
+- HTTP endpoint wired to domain
+- In-memory stock store fixture for example
+
+---
+
+## Milestone M2 — Operator can query any catalog item
+
+### Product Value
+
+The same query contract works for any SKU present in the catalog — not only the
+fixture used in M1.
+
+### Consumer
+
+Warehouse operator using the inventory HTTP API.
+
+### Observable Result
+
+Multiple distinct SKUs return correct quantities from the shared stock store.
+
+### Evidence
+
+- Integration test: parameterized cases across catalog SKUs
+- Operator smoke test: two different SKUs in one session
+
+### Implementation Tasks
+
+- Expand stock store fixture to full example catalog
+- Regression tests for M1 cases
+
+---
+
+## Milestone M3 — Operator receives not-found for unknown items
+
+### Product Value
+
+An operator receives a clear, contract-defined response when a warehouse or SKU
+does not exist — the API does not fail silently or return misleading quantities.
+
+### Consumer
+
+Warehouse operator using the inventory HTTP API.
+
+### Observable Result
+
+Unknown SKU returns `404` (or contract-defined not-found) with no quantity body.
+
+### Evidence
+
+- Integration test: unknown SKU and unknown warehouse cases
+- Outcome certification: end-to-end operator query scenario (GR-13)
+
+### Implementation Tasks
+
+- Not-found mapping in domain and HTTP layer
+- Outcome certification test entrypoint
 
 ---
 
 ## Closing the Intention
 
-After M4 PASS:
+After M3 PASS:
 
-1. **Intention Audit** confirms the user-visible outcome exists.
+1. **Intention Audit** confirms the operator can query stock end to end (GR-13).
 2. **Human Review** approves the completed capability.
 3. **Product Knowledge Synchronization** records verified knowledge.
 4. The Intention is marked **Closed**.

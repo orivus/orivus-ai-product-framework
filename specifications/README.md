@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Normative |
 
 Normative specifications for the Orivus AI Product Framework (v0.1).
 
@@ -32,9 +32,9 @@ The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **
 
 | Specification | Status | Defines |
 |---------------|--------|---------|
-| [Governance Specification](GOVERNANCE_SPECIFICATION.md) | Normative | GS-1 through GS-13 — what every implementation must satisfy |
+| [Governance Specification](GOVERNANCE_SPECIFICATION.md) | Normative | GS-1 through GS-14 — what every implementation must satisfy |
 | [Product Specification](PRODUCT_SPECIFICATION.md) | Normative | Product model, states, artifacts, lifecycle, Product Record |
-| [AI Agent Specification](AI_AGENT_SPECIFICATION.md) | Normative | Agent behavior — AS-1 through AS-15 |
+| [AI Agent Specification](AI_AGENT_SPECIFICATION.md) | Normative | Agent behavior — AS-1 through AS-17 |
 | [Milestone Transaction Protocol](MILESTONE_TRANSACTION_PROTOCOL.md) | Normative | Atomic milestone execution — LOCK through NEXT, anti-batching, precedence |
 | [Framework Validation Protocol](FRAMEWORK_VALIDATION_PROTOCOL.md) | Normative | Reference Validations — framework property certification before product resume |
 | [Conformance Program](CONFORMANCE_PROGRAM.md) | **Preparatory** | Future conformance model — **not operational in v0.1** |
@@ -54,8 +54,15 @@ Operational certification does not exist in v0.1. See [Conformance Program](CONF
 ## Deliberately Not in v0.1
 
 - operational certification or official conformance authority;
-- rigid schemas for ADR, RFC, or Implementation Plan;
-- mandatory document templates;
+- rigid schemas for ADR or RFC;
+
+## Added in v0.2
+
+- [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](../templates/IMPLEMENTATION_PLAN_TEMPLATE.md)
+  — milestone structure for value-driven plans (FV-002 PASS).
+
+## Still not in scope
+
 - tool-specific integrations;
 - domain-specific rules;
 - product-specific practices.

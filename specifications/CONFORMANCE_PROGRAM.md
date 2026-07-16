@@ -51,9 +51,9 @@ Conformance is evaluated against these specifications:
 
 | Specification | Identifier |
 |---------------|------------|
-| [Governance Specification](GOVERNANCE_SPECIFICATION.md) | GS-1 through GS-13 |
+| [Governance Specification](GOVERNANCE_SPECIFICATION.md) | GS-1 through GS-14 |
 | [Product Specification](PRODUCT_SPECIFICATION.md) | Product requirements |
-| [AI Agent Specification](AI_AGENT_SPECIFICATION.md) | AS-1 through AS-15 |
+| [AI Agent Specification](AI_AGENT_SPECIFICATION.md) | AS-1 through AS-17 |
 | This Conformance Program | Conformance requirements |
 
 ---
@@ -167,7 +167,7 @@ Evidence MAY include, as applicable:
 | Architecture records | Architecture authority compliance (GS-12) |
 | Human approval records | Intention-level human governance (GS-9) |
 | Agent invocation records | Governed agent invocation (AI Agent Specification §8) |
-| Prohibited behavior absence | No AS-1 through AS-15 violations |
+| Prohibited behavior absence | No AS-1 through AS-17 violations |
 
 ### 5.3 Evidence by Conformance Level
 

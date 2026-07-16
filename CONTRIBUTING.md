@@ -14,8 +14,8 @@ knowledge-driven, evidence-based, and human-governed.
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | **Validated** |
 | License | [Apache License 2.0](LICENSE) |
 
 **v0.1 is frozen.** No new specifications, rules, or concepts are accepted into
@@ -65,6 +65,9 @@ independently from this repository.
 
 These require empirical evidence from independent reference implementations and
 a Reference Validation PASS before they can be adopted.
+
+**v0.2** is validated — see [RELEASE-NOTES-v0.2.md](RELEASE-NOTES-v0.2.md)
+and [FRAMEWORK_VERSION.md](validation/FRAMEWORK_VERSION.md). v0.1 remains frozen.
 
 ---
 

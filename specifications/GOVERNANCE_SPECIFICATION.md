@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Normative |
 | Scope | Product implementations · Agent implementations · Full framework implementations |
 
 This specification defines the mandatory governance requirements for any implementation of the Orivus AI Product Framework.
@@ -223,15 +223,50 @@ Architectural integrity MUST take priority over implementation convenience.
 
 ### GS-13 — Product Outcome Realization
 
-An Intention MUST NOT be marked **READY FOR HUMAN REVIEW**, **Approved**, or **Closed** unless its defined Product Outcome is **observable as user-visible product capability**.
+An Intention MUST NOT be marked **READY FOR HUMAN REVIEW**, **Approved**, or **Closed** unless its defined Product Outcome is **observable as user-visible product value**.
 
-Milestone PASS verdicts certify Milestone scope only. They MUST NOT be interpreted as Intention completion when the Product Outcome is still absent.
+Milestone PASS verdicts certify milestone scope only. They MUST NOT be interpreted as Intention completion when the Product Outcome is still absent.
 
-Infrastructure milestones — including architecture, runtime constraints, certification harnesses, and deterministic stand-ins — MAY reach PASS without satisfying the Product Outcome.
-
-Intention Audit MUST verify Product Outcome realization explicitly. Intention Audit MUST receive **REJECT** when the promised capability is missing, regardless of Milestone PASS count or test coverage.
+Intention Audit MUST verify Product Outcome realization explicitly. Intention Audit MUST receive **REJECT** when the promised value is missing, regardless of Milestone PASS count or test coverage.
 
 Implementation without eventual user-visible Outcome realization is non-conformant for Intention closure.
+
+Per-milestone value requirements: [GS-14](#gs-14--verifiable-product-value-per-milestone).
+
+---
+
+### GS-14 — Verifiable Product Value per Milestone
+
+A **Milestone** is the smallest governable unit of **verifiable product value** toward the Product Outcome of the Intention.
+
+Every Milestone in an Implementation Plan MUST represent a new increment of verifiable product value — a partial realization of the Product Outcome, not an independent technical task.
+
+Each Milestone MUST declare, before execution begins:
+
+| Field | Requirement |
+|-------|-------------|
+| **Product Value** | What new value the product delivers when the milestone completes |
+| **Consumer** | Who experiences that value |
+| **Observable Result** | What can be observed when the value exists |
+| **Evidence** | How the value is demonstrated — automated and human when required |
+| **Implementation Tasks** | Technical work required to deliver the value |
+
+**Implementation Tasks** MUST NOT be promoted to Milestones. Internal implementation artifacts MAY exist only as tasks required to deliver the Milestone's Product Value.
+
+A Milestone MUST NOT receive PASS unless the **Product Value** defined for that Milestone is demonstrable for the product consumer through the evidence declared in the Implementation Plan.
+
+Milestone Audit MUST evaluate whether the promised product value exists — not whether technical artifacts were implemented.
+
+A Milestone defined only by technical deliverables (layers, modules, boundaries, packaging) without Product Value and Observable Result is non-conformant.
+
+Milestone Audit MUST receive **REJECT** when:
+
+- Product Value is absent or undefined;
+- Observable Result is absent or undefined;
+- the promised value is not demonstrable through declared evidence;
+- only internal implementation artifacts were delivered.
+
+Template: [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](../templates/IMPLEMENTATION_PLAN_TEMPLATE.md).
 
 ---
 
@@ -293,6 +328,7 @@ Informative documents in [framework/](../framework/README.md) MUST NOT override 
 | GS-11 | Markdown First | Product |
 | GS-12 | Architecture Authority | Product · Agent |
 | GS-13 | Product Outcome Realization | Product · Intention · Process |
+| GS-14 | Verifiable Product Value per Milestone | Product · Agent · Process |
 
 ---
 
@@ -311,7 +347,7 @@ Full framework conformance requires all three normative specifications. v0.1: se
 ## 9. Informative References
 
 - [Core Principles](../framework/CORE_PRINCIPLES.md) — philosophical foundation
-- [Governance Rules](../framework/GOVERNANCE_RULES.md) — informative counterpart (GR-1 through GR-13)
+- [Governance Rules](../framework/GOVERNANCE_RULES.md) — informative counterpart (GR-1 through GR-14)
 - [Canonical Workflow](../framework/CANONICAL_WORKFLOW.md) — operational workflow
 - [AI Execution Model](../framework/AI_EXECUTION_MODEL.md) — execution governance model
 
@@ -332,3 +368,4 @@ Full framework conformance requires all three normative specifications. v0.1: se
 | GR-11 | GS-11 |
 | GR-12 | GS-12 |
 | GR-13 | GS-13 |
+| GR-14 | GS-14 |

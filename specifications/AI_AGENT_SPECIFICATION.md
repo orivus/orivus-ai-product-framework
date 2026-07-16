@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Normative |
 | Scope | Technology-independent · Model-independent · Platform-independent |
 
 Normative specification defining how any Artificial Intelligence agent MUST behave when executing engineering work within the Orivus AI Product Framework.
@@ -327,6 +327,8 @@ Architecture has final authority.
 | **AS-13** | Completing cycle without Product Knowledge Synchronization |
 | **AS-14** | Stopping between Milestones for human approval when no governance blocker exists |
 | **AS-15** | Batching multiple Milestones in one transaction — implement, verify, audit, or PASS |
+| **AS-16** | Marking Milestone PASS when Product Value defined in the Implementation Plan is not demonstrable for the product consumer |
+| **AS-17** | LOCK or IMPLEMENT on a Milestone that does not declare Product Value and Observable Result in the Implementation Plan |
 
 ---
 
@@ -383,21 +385,25 @@ Every Delivery invocation MUST establish:
 | Intention | Active Intention identifier |
 | Product Outcome | Measurable capability |
 | Milestone | Active Milestone identifier |
+| Product Value | Verifiable value this milestone delivers toward the Product Outcome |
+| Observable Result | What the product consumer can observe when the value exists |
 | AI Context | Governed knowledge reference |
-| Acceptance Criteria | Verifiable evidence definition |
+| Evidence | How product value is demonstrated — automated and human when required |
 
 If any field is missing, the agent MUST NOT execute.
 
 ### 8.3 Compliant Example
 
 ```
-Product: Example Voice Platform
+Product: Example Inventory Platform
 Mode: Delivery
-Intention: 002 — Engine Adapter
-Product Outcome: Product synthesizes speech through pluggable engine adapter
-Milestone: M3 — Engine Port
-AI Context: docs/intentions/002/AI_CONTEXT-002.md
-Acceptance Criteria: port implemented; adapters pass; architecture tests pass
+Intention: 001 — Real-Time Stock Visibility API
+Product Outcome: Operator can query current stock for a warehouse and SKU
+Milestone: M2 — Operator can query stock for known items
+Product Value: Operator receives accurate quantity for a valid warehouse and SKU
+Observable Result: HTTP GET returns current quantity or not-found per contract
+AI Context: docs/intention/001/AI_CONTEXT-001.md
+Evidence: integration test against public endpoint; operator smoke test
 ```
 
 ### 8.4 Non-Compliant Example
@@ -434,14 +440,16 @@ The agent MUST NOT execute a Milestone until Delivery is ready:
 
 - Product Outcome exists;
 - AI Context exists;
+- the active Milestone declares Product Value and Observable Result in the Implementation Plan;
 - Planning is sufficient;
-- Acceptance Criteria exist.
+- Evidence path is defined.
 
 ### 9.3 Milestone Complete
 
 The agent MUST NOT proceed to the next Milestone until:
 
 - Project is VERIFIED;
+- the Product Value defined for the locked Milestone is demonstrable for the product consumer;
 - Milestone Audit receives PASS;
 - the Implementation Plan state is updated;
 - Product Shared Memory is synchronized through Product Knowledge Synchronization when required.

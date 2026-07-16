@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Informative — v0.2 Validated |
 | Normative Counterpart | [specifications/](../specifications/README.md) |
 
 Conceptual model for knowledge-driven product development.
@@ -38,7 +38,7 @@ Introduction → Core Principles → Product Lifecycle → Product Knowledge Mod
 | 3 | [Product Lifecycle](PRODUCT_LIFECYCLE.md) | Discovery and Delivery lifecycles |
 | 4 | [Product Knowledge Model](PRODUCT_KNOWLEDGE_MODEL.md) | Knowledge layers — Foundation, Shared Memory, AI Context |
 | 5 | [AI Execution Model](AI_EXECUTION_MODEL.md) | Cognitive cycle, validation, audits, human review |
-| 6 | [Governance Rules](GOVERNANCE_RULES.md) | Operational constraints — GR-1 through GR-13 (informative) |
+| 6 | [Governance Rules](GOVERNANCE_RULES.md) | Operational constraints — GR-1 through GR-14 (informative) |
 | 7 | [Canonical Workflow](CANONICAL_WORKFLOW.md) | End-to-end workflow |
 | 8 | [Appendices](APPENDICES.md) | Optional adoption guidance — no additional rules |
 

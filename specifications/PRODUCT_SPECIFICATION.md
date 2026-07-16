@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | 0.2 |
+| Status | Normative |
 | Scope | Technology-independent · Vendor-independent · Domain-independent |
 
 Normative specification defining what an AI-native product is within the Orivus AI Product Framework.
@@ -288,6 +288,38 @@ They express Intention knowledge.
 
 They MUST NOT be confused with the Intention itself.
 
+### 8.6 Milestones
+
+A **Milestone** is the smallest governable unit of **verifiable product value** toward the Product Outcome of the Intention.
+
+A Milestone is NOT a unit of technical execution. Technical work exists as **Implementation Tasks** within a Milestone.
+
+Each Milestone MUST be a **partial realization** of the Product Outcome:
+
+```
+Product Outcome
+    → Milestone 1 (+ verifiable value)
+    → Milestone 2 (+ verifiable value)
+    → Milestone N (+ verifiable value)
+    → Product Outcome complete
+```
+
+Every Milestone in an Implementation Plan MUST declare:
+
+| Field | Requirement |
+|-------|-------------|
+| Product Value | New value delivered to the product consumer |
+| Consumer | Who experiences the value |
+| Observable Result | What can be observed when the value exists |
+| Evidence | Automated and human verification when required |
+| Implementation Tasks | Technical work to deliver the value |
+
+A Milestone MUST NOT receive PASS unless its defined Product Value is demonstrable for the product consumer.
+
+Normative: [GS-14](GOVERNANCE_SPECIFICATION.md#gs-14--verifiable-product-value-per-milestone).
+
+Template: [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](../templates/IMPLEMENTATION_PLAN_TEMPLATE.md).
+
 ---
 
 ## 9. Product Outcome
@@ -391,7 +423,8 @@ Contracts MUST be:
 
 ```
 Knowledge Validation → Implementation Validation (VERIFIED)
-    → Milestone Validation → Outcome Validation → Human Validation
+    → Milestone Validation (product value demonstrable — GS-14)
+    → Outcome Validation → Human Validation
 ```
 
 Each level MUST pass before the next begins.
@@ -512,6 +545,7 @@ Product State MUST be **Foundation** or **Delivery** as appropriate.
 A Milestone is complete when:
 
 - Project is VERIFIED;
+- the Product Value defined in the Implementation Plan is demonstrable for the product consumer;
 - Milestone Audit receives PASS;
 - Product Knowledge Synchronization is performed when verified knowledge was produced.
 

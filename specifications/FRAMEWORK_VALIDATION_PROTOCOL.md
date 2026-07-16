@@ -45,10 +45,11 @@ Reference Validations form the framework's certification suite — analogous to 
 | ID | Property | Status |
 |----|----------|--------|
 | FV-001 | Sequential Milestone Execution | **PASS** |
-| FV-002 | Self-Healing Loop | Planned |
-| FV-003 | Outcome Certification | Planned |
-| FV-004 | Product Knowledge Synchronization | Planned |
-| FV-005 | Dead Code Convergence | Planned |
+| FV-002 | Value-Driven Milestones | **PASS** |
+| FV-003 | Self-Healing Loop | Planned |
+| FV-004 | Outcome Certification | Planned |
+| FV-005 | Product Knowledge Synchronization | Planned |
+| FV-006 | Dead Code Convergence | Planned |
 
 Each framework change that modifies agent behavior MUST incorporate at least one Reference Validation demonstrating the introduced or modified property. A framework change is not validated until its Reference Validation reaches **PASS**.
 
@@ -100,8 +101,9 @@ The exercise artifact (e.g. a logger interface) MAY be trivial. Its correctness 
 ```
 validation/
     FV-001-sequential-milestone-loop/
-    FV-002-self-healing/
-    FV-003-outcome-certification/
+    FV-002-value-driven-milestones/
+    FV-003-self-healing/
+    FV-004-outcome-certification/
     ...
 ```
 

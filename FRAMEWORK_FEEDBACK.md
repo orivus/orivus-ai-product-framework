@@ -2,9 +2,9 @@
 
 | Field | Value |
 |-------|-------|
-| Version | 0.1 |
-| Status | **Frozen** — v0.1 Validated; observations only until v0.2 |
-| Target | v0.2 evidence from independent reference implementations |
+| Version | 0.2 |
+| Status | **Validated** — OBS-001…OBS-005 incorporated; FV-002 PASS |
+| Target | v0.2 release after Reference Validation PASS |
 
 ---
 
@@ -155,3 +155,29 @@ Human approval of FV-001 with explicit property table (one milestone at a time, 
 **Recommendation**
 
 Adopt **Reference Validation** terminology; each FV declares a **Property**; evolution rule: agent-behavior framework changes require matching FV PASS before Framework Version Validated.
+
+---
+
+### OBS-005 — Horizontal milestones measure technical progress, not product value
+
+| Field | Value |
+|-------|-------|
+| Product | Reference implementation (multi-platform product runtime) |
+| Date | 2026-07-11 |
+| Milestone / Phase | Native product runtime Intention — Implementation Plan with seventeen milestones |
+
+**Problem**
+
+The Implementation Plan defined milestones as technical execution units (runtime artifact, boundary layer, bootstrap without sound, adapter foundation, asset packaging, pipeline connection, and similar steps). Each milestone could reach VERIFIED and Milestone Audit PASS while the product consumer gained no new observable value. GS-13 permitted infrastructure milestones to PASS without satisfying the Product Outcome, deferring value to the final milestones.
+
+**Impact**
+
+Seventeen consecutive milestone PASS verdicts while the public product API still could not deliver the Intention's promised behavior. Rework required: Intention reset, evidence rejected, full replanning. The framework's execution model (MTP, anti-batching, evidence) operated correctly; the plan defined invalid milestone units.
+
+**Evidence**
+
+Reference implementation Implementation Plan marked M1–M17 PASS; Intention reset documented that in-memory and simulated paths were withdrawn as product evidence; Product Outcome (audible speech through the official public API on a physical device) was absent until the final milestones.
+
+**Recommendation**
+
+v0.2 MUST redefine **Milestone** as the smallest governable unit of **verifiable product value** toward the Product Outcome — not a unit of technical execution. Each milestone MUST declare Product Value, Consumer, Observable Result, Evidence, and Implementation Tasks. GS-14: a milestone MUST NOT receive PASS unless its defined product value is demonstrable for the product consumer. Remove the GS-13 infrastructure exception. Provide [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](templates/IMPLEMENTATION_PLAN_TEMPLATE.md). Validate via FV-002 — Value-Driven Milestones.

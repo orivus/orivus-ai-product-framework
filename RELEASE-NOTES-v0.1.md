@@ -71,7 +71,7 @@ See [validation/FRAMEWORK_VERSION.md](validation/FRAMEWORK_VERSION.md).
   evidence.
 - **Single Reference Validation.** Only FV-001 is certified. Self-Healing,
   Outcome Certification, Product Knowledge Synchronization, and Dead Code
-  Convergence are **not yet** independently validated (FV-002…FV-005 planned).
+  Convergence are **not yet** independently validated (FV-003…FV-006 planned).
 - **Conformance is self-assessment.** No operational conformance authority or
   certification exists. The [Conformance Program](specifications/CONFORMANCE_PROGRAM.md)
   is preparatory.

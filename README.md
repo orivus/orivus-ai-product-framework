@@ -2,8 +2,8 @@
 
 **An Experimental Open Standard for AI-Native Product Engineering**
 
-| Version | 0.1 |
-| Status | Experimental — Frozen |
+| Version | **0.2** |
+| Status | **Validated** |
 | License | [Apache License 2.0](LICENSE) |
 
 ---
@@ -148,15 +148,13 @@ You do not need a specific product, vendor, IDE, or AI model to adopt this stand
 
 | Field | Value |
 |-------|-------|
-| Version | **0.1** |
+| Version | **0.2** |
 | Maturity | **Experimental** — suitable for evaluation and reference implementations |
-| Change policy | **Frozen** — no new rules until v0.2 is justified by evidence |
-| Validation | [FV-001](validation/FV-001-sequential-milestone-loop/README.md) PASS — Sequential Milestone Execution |
+| Change policy | **Validated** — v0.1 frozen; v0.2 current |
+| Validation | [FV-001](validation/FV-001-sequential-milestone-loop/README.md) PASS · [FV-002](validation/FV-002-value-driven-milestones/README.md) PASS |
 | Record | [FRAMEWORK_VERSION.md](validation/FRAMEWORK_VERSION.md) |
 
-This is an experimental release. It is published to be studied, adopted, tested, and improved through real use. See [RELEASE-NOTES-v0.1.md](RELEASE-NOTES-v0.1.md) for known limitations.
-
-Friction found during adoption is recorded in [FRAMEWORK_FEEDBACK.md](FRAMEWORK_FEEDBACK.md). v0.2 opens only when independent reference implementations produce sufficient evidence. See [ROADMAP.md](ROADMAP.md).
+See [RELEASE-NOTES-v0.2.md](RELEASE-NOTES-v0.2.md). Friction: [FRAMEWORK_FEEDBACK.md](FRAMEWORK_FEEDBACK.md). Evolution: [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -171,7 +169,7 @@ Friction found during adoption is recorded in [FRAMEWORK_FEEDBACK.md](FRAMEWORK_
 | Read the essay | [Why Product Knowledge Matters in AI-Native Engineering](https://orivus.github.io/orivus-ai-product-framework/article.html) |
 | Learn the conceptual model | [framework/INTRODUCTION.md](framework/INTRODUCTION.md) |
 | Read the normative rules | [specifications/](specifications/README.md) |
-| See a governed execution example | [validation/FV-001](validation/FV-001-sequential-milestone-loop/README.md) |
+| See a governed execution example | [FV-001](validation/FV-001-sequential-milestone-loop/README.md) · [FV-002](validation/FV-002-value-driven-milestones/README.md) |
 | Contribute or report friction | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 Website: [orivus.github.io/orivus-ai-product-framework](https://orivus.github.io/orivus-ai-product-framework/)
@@ -193,9 +191,10 @@ The standard is organized in four layers:
 
 | Specification | Defines |
 |---------------|---------|
-| [Governance Specification](specifications/GOVERNANCE_SPECIFICATION.md) | GS-1…GS-13 — engineering governance requirements |
+| [Governance Specification](specifications/GOVERNANCE_SPECIFICATION.md) | GS-1…GS-14 — engineering governance requirements |
 | [Product Specification](specifications/PRODUCT_SPECIFICATION.md) | Product model, states, artifacts, lifecycle |
-| [AI Agent Specification](specifications/AI_AGENT_SPECIFICATION.md) | AS-1…AS-15 — agent behavior requirements |
+| [AI Agent Specification](specifications/AI_AGENT_SPECIFICATION.md) | AS-1…AS-17 — agent behavior requirements |
+| [Implementation Plan template](templates/IMPLEMENTATION_PLAN_TEMPLATE.md) | Value-driven milestone structure (v0.2) |
 | [Milestone Transaction Protocol](specifications/MILESTONE_TRANSACTION_PROTOCOL.md) | Atomic milestone execution |
 | [Framework Validation Protocol](specifications/FRAMEWORK_VALIDATION_PROTOCOL.md) | Standard property certification |
 | [Conformance Program](specifications/CONFORMANCE_PROGRAM.md) | Preparatory — not operational in v0.1 |

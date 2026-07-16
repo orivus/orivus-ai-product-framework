@@ -2,34 +2,25 @@
 
 | Field | Value |
 |-------|-------|
-| Current validated version | **0.1** |
-| Status | **Validated — Frozen** |
-| Validated date | 2026-07-05 |
-| Human approval | **PASS** — Reference Validation FV-001 |
+| Current validated version | **0.2** |
+| Status | **Validated** |
+| Validated date | 2026-07-12 |
+| Human approval | **PASS** — Reference Validation FV-002 |
 | Identity document | [MANIFESTO.md](../MANIFESTO.md) |
 
 ---
 
-## v0.1 Closure
+## v0.2 — Value-Driven Milestones
 
-Framework version **0.1** is validated and frozen.
+Framework version **0.2** is validated.
 
 | Closure action | Status |
 |----------------|--------|
-| [MANIFESTO.md](../MANIFESTO.md) — standard identity separated from implementation | Complete |
-| [README.md](../README.md) — repository index, four-layer structure | Complete |
-| Specifications and rules — no further v0.1 changes | Frozen |
-| v0.2 evolution — deferred to independent reference implementation evidence | Pending |
-
-The standard evolves through verified engineering experience, never through theoretical completeness.
-
-During active product delivery, record friction in [FRAMEWORK_FEEDBACK.md](../FRAMEWORK_FEEDBACK.md). Do not modify v0.1.
-
----
-
-## What was validated
-
-Framework version **0.1** is validated for governing product development. Validation certifies **framework behavior** — not any exercise artifact.
+| GS-14 / GR-14 — verifiable product value per milestone | Complete |
+| GS-13 / GR-13 — infrastructure milestone exception removed | Complete |
+| Implementation Plan template | Complete |
+| FV-002 — Value-Driven Milestones | **PASS** (human approved 2026-07-12) |
+| Evidence OBS-005 | Complete |
 
 ---
 
@@ -38,49 +29,40 @@ Framework version **0.1** is validated for governing product development. Valida
 | ID | Property | Verdict | Evidence |
 |----|----------|---------|----------|
 | [FV-001](FV-001-sequential-milestone-loop/README.md) | Sequential Milestone Execution | **PASS** | [VALIDATION-evidence.md](FV-001-sequential-milestone-loop/evidence/VALIDATION-evidence.md) |
+| [FV-002](FV-002-value-driven-milestones/README.md) | Value-Driven Milestones | **PASS** | [VALIDATION-evidence.md](FV-002-value-driven-milestones/evidence/VALIDATION-evidence.md) |
 
 ---
 
-## Properties certified (v0.1)
+## Properties certified (v0.2)
+
+Includes all v0.1 properties plus:
 
 | Property | Validated by |
 |----------|--------------|
-| Sequential Milestone Execution | FV-001 |
-| Anti-batching | FV-001 |
-| Incremental evidence | FV-001 |
-| Incremental Living State | FV-001 |
-| Autonomous milestone progression | FV-001 |
-| Human Review at Intention end only | FV-001 |
+| Value-Driven Milestones | FV-002 |
+| Horizontal technical milestones REJECT | FV-002 |
+| Milestone Audit evaluates product value | FV-002 |
+| GS-14 enforceable at milestone level | FV-002 |
 
 ---
 
-## Pending Reference Validations (v0.2 candidates)
+## v0.1 (superseded, frozen)
 
-These require evidence from reference product builds before formal inclusion:
+Framework version **0.1** was validated 2026-07-05 (FV-001). Remains documented and frozen.
+
+---
+
+## Pending Reference Validations
 
 | ID | Property | Required before |
 |----|----------|-----------------|
-| FV-002 | Self-Healing Loop | Next self-healing model change |
-| FV-003 | Outcome Certification | Outcome certification model change |
-| FV-004 | Product Knowledge Synchronization | PKS model change |
-| FV-005 | Dead Code Convergence | Dead code policy change |
+| FV-003 | Self-Healing Loop | Next self-healing model change |
+| FV-004 | Outcome Certification | Outcome certification model change |
+| FV-005 | Product Knowledge Synchronization | PKS model change |
+| FV-006 | Dead Code Convergence | Dead code policy change |
 
 ---
 
-## Resume authorization
+## v0.3 Evolution Gate
 
-Product development MAY resume on Intentions paused for framework execution model refinement, subject to human direction on resume point.
-
-Reference implementations paused for framework refinement resume from their first PENDING milestone when explicitly authorized.
-
----
-
-## v0.2 Evolution Gate
-
-v0.2 opens only when:
-
-1. Independent reference implementations produce sufficient empirical evidence;
-2. Observations in [FRAMEWORK_FEEDBACK.md](../FRAMEWORK_FEEDBACK.md) justify specific changes;
-3. Each behavioral change includes a Reference Validation PASS.
-
-No new specifications, rules, or concepts until this gate opens.
+v0.3 opens only when independent reference implementations produce evidence and a Reference Validation PASS for each behavioral change.

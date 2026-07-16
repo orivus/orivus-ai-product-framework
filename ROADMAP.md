@@ -2,109 +2,58 @@
 
 | Field | Value |
 |-------|-------|
-| Current version | 0.1 |
-| Status | Experimental — Frozen |
-
-This roadmap describes how the Orivus AI Product Framework evolves. It is
-intentionally evidence-driven: the standard advances through learning from real
-product implementations, not through speculative design.
-
-> The standard evolves only through evidence obtained from real product
-> implementations.
+| Current version | 0.2 |
+| Status | Experimental — Validated |
 
 ---
 
-## Guiding Principle
+## v0.2 — Value-Driven Milestones (current)
 
-The standard never depends on any product. Products depend on the standard.
+**Status: Validated** (FV-002 PASS, human approved 2026-07-12).
 
-Every version increment must preserve the standard's independence from any
-specific product, vendor, tool, IDE, or AI model.
+### Theme
 
----
+A **Milestone** is the smallest governable unit of **verifiable product value**
+toward the Product Outcome. Technical work is **Implementation Tasks** within a
+milestone — not milestones themselves.
 
-## v0.1 — Experimental (current)
+Evidence: [OBS-005](FRAMEWORK_FEEDBACK.md#obs-005--horizontal-milestones-measure-technical-progress-not-product-value) · [FV-002](validation/FV-002-value-driven-milestones/README.md).
 
-**Status: Frozen.**
+### Delivered
 
-Delivered:
-
-- Standard identity (Manifesto).
-- Conceptual model (framework layer).
-- Normative specifications (GS, PS, AS, MTP, Framework Validation Protocol).
-- First Reference Validation (FV-001 — Sequential Milestone Execution, PASS).
-- Open source release artifacts.
-
-v0.1 is frozen. No new specifications, rules, or concepts are added to v0.1.
-Friction found in real use is recorded as observations in
-[FRAMEWORK_FEEDBACK.md](FRAMEWORK_FEEDBACK.md).
+- GS-14 / GR-14 — verifiable product value per milestone
+- GS-13 / GR-13 — infrastructure milestone exception removed
+- [templates/IMPLEMENTATION_PLAN_TEMPLATE.md](templates/IMPLEMENTATION_PLAN_TEMPLATE.md)
+- [examples/inventory-platform/IMPLEMENTATION_PLAN-001.md](examples/inventory-platform/IMPLEMENTATION_PLAN-001.md) rewritten
+- FV-002 — Value-Driven Milestones **PASS**
 
 ---
 
-## v0.2 — Evidence Gate (next)
+## v0.1 — Experimental (frozen)
 
-v0.2 opens **only** when all of the following hold:
-
-1. Independent reference implementations produce sufficient empirical evidence.
-2. Observations in [FRAMEWORK_FEEDBACK.md](FRAMEWORK_FEEDBACK.md) justify
-   specific, concrete changes.
-3. Each behavioral change ships with a Reference Validation that reaches **PASS**.
-
-### Candidate Reference Validations for v0.2
-
-These are planned properties awaiting evidence before formal inclusion:
-
-| ID | Property | Required before |
-|----|----------|-----------------|
-| FV-002 | Self-Healing Loop | Any change to the self-healing model |
-| FV-003 | Outcome Certification | Any change to the outcome certification model |
-| FV-004 | Product Knowledge Synchronization | Any change to the PKS model |
-| FV-005 | Dead Code Convergence | Any change to the dead-code / convergence policy |
-
-No candidate is adopted on theoretical merit. Each requires evidence plus a
-Reference Validation PASS.
+**Status: Frozen.** Validated 2026-07-05 (FV-001).
 
 ---
 
-## Beyond v0.2 (directional, not committed)
+## Beyond v0.2 (directional)
 
-- Operational Conformance Program (currently **preparatory**, not operational).
-- Additional reference implementations across independent domains to strengthen
-  external validity.
-- Adoption tooling and getting-started material (non-normative).
+| ID | Property |
+|----|----------|
+| FV-003 | Self-Healing Loop |
+| FV-004 | Outcome Certification |
+| FV-005 | Product Knowledge Synchronization |
+| FV-006 | Dead Code Convergence |
 
-These are directions, not promises. They advance only with evidence.
-
----
-
-## Versioning and Compatibility
-
-The standard uses semantic-style versioning for a specification:
-
-| Change | Increment | Meaning |
-|--------|-----------|---------|
-| Editorial / clarity / errata | patch (0.1.x) | No behavioral change. Always compatible. |
-| Backward-compatible additions | minor (0.x) | New optional rules or properties. Conforming implementations remain conforming. |
-| Breaking changes to normative behavior | major (x.0) | A conforming implementation may need changes to remain conforming. |
-
-### What "breaking the standard" means
-
-A change is **breaking** when a previously conforming product, agent, or process
-would no longer conform without modification. Breaking changes:
-
-- require a major version increment;
-- require Reference Validation evidence;
-- must be documented in [CHANGELOG.md](CHANGELOG.md) with a migration note.
-
-During the experimental phase (0.x), the standard may still change as evidence
-accumulates. Stability guarantees strengthen as the standard matures.
+v0.3 opens only with evidence and Reference Validation PASS per change.
 
 ---
 
-## How Changes Are Approved
+## Versioning
 
-See [GOVERNANCE.md](GOVERNANCE.md). In summary:
+| Change | Increment |
+|--------|-----------|
+| Editorial / clarity | patch (0.2.x) |
+| Backward-compatible additions | minor (0.x) |
+| Breaking normative behavior | major (x.0) |
 
-```
-Observation → Evidence → Reference Validation PASS → Human Approval → Release
-```
+See [CHANGELOG.md](CHANGELOG.md).

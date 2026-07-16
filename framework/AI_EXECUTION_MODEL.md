@@ -138,11 +138,14 @@ Execution is constrained by the AI Context.
 
 Every Milestone MUST be executed through the Milestone Execution Loop.
 
+A Milestone is the smallest governable unit of **verifiable product value** toward the Product Outcome — not a unit of technical execution. See [GS-14](../specifications/GOVERNANCE_SPECIFICATION.md#gs-14--verifiable-product-value-per-milestone).
+
 A Milestone is not complete when code is changed.
 
 A Milestone is complete only when:
 
 - implementation is complete;
+- the Product Value defined in the Implementation Plan is demonstrable for the product consumer;
 - validation reaches VERIFIED;
 - evidence is produced;
 - Milestone Audit returns PASS;
@@ -289,7 +292,8 @@ Milestone Audit evaluates one engineering objective.
 
 It verifies:
 
-- milestone objective;
+- milestone Product Value and Observable Result;
+- whether the promised product value is demonstrable;
 - acceptance criteria;
 - architecture compliance;
 - ADR compliance;
